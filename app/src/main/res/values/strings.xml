@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">WeSwing</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="idiomas">
+        <item>Español</item>
+        <item>Venezolano</item>
+        <item>Inglés</item>
+        <item>Italiano</item>
+        <item>Portugués</item>
+    </string-array>
+
+    <string-array name="pais">
+        <item>Spain</item>
+        <item>Venezuela</item>
+        <item>Inglaterra</item>
+        <item>Argentina</item>
+        <item>Italia</item>
+        <item>Portugal</item>
+    </string-array>
+
+    <string-array name="follower">
+        <item>Follower</item>
+        <item>creator</item>
+    </string-array>
+
+    <string-array name="male">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+</resources>
