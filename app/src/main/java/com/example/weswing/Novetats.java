@@ -6,11 +6,14 @@ import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Novetats extends AppCompatActivity {
 
     TextView txtview1,txtview2,txtview3,txtview4,txtview5;
+    ImageView flecha1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,23 +21,49 @@ public class Novetats extends AppCompatActivity {
 
         txtview1 = findViewById(R.id.txtview1);
         txtview2= findViewById(R.id.txtview2);
+        txtview3=findViewById(R.id.txtview3);
+        txtview4=findViewById(R.id.txtview4);
 
-        SpannableString spannableString= new SpannableString("I'm beginning to see the light (0 assistents) avui a las 22:10");
-        SpannableString spannableString1= new SpannableString("Angela Mena Also asistirà a Festa d'Inici de Trimestre i presentació de professors! (5 assistents).");
+        SpannableString spannableString = new SpannableString("I'm beginning to see the light (0 assistents) avui a las 22:10");
+        applyColorSpan(spannableString, "I'm beginning to see the light", R.color.rojo);
+
+        SpannableString spannableString1 = new SpannableString("Angela Mena Also asistirà a Festa d'Inici de Trimestre i presentació dels professors! (5 assistents).");
+        applyColorSpan(spannableString1, "Angela Mena Also", R.color.rojo);
+        applyColorSpan(spannableString1, "Festa d'Inici de Trimestre i presentació dels professors!", R.color.rojo);
+
+        SpannableString spannableString2 = new SpannableString("Cristina Sánchez assistirà a Classe oberta d'Afrobeat amb el Jordi Maho! (1 assistent).");
+        applyColorSpan(spannableString2, "Cristina Sánchez", R.color.rojo);
+        applyColorSpan(spannableString2, "Classe oberta d'Afrobeat amb el Jordi Maho!", R.color.rojo);
+
+        SpannableString spannableString3 = new SpannableString("Cristina Sánchez assistirà a Classe oberta de Pilates amb la Lara Fontana! (1 assistent");
+        applyColorSpan(spannableString3, "Cristina Sánchez", R.color.rojo);
+        applyColorSpan(spannableString3, "Classe oberta de Pilates amb la Lara Fontana!", R.color.rojo);
 
 
-        ForegroundColorSpan colorSpan1= new ForegroundColorSpan(getResources().getColor(R.color.rojo));
-        spannableString.setSpan(colorSpan1,0,30, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        //Queda pendiente hacer que cambie a fragment o activity cuando presione la flecha.
+        flecha1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        spannableString1.setSpan(colorSpan1,0,16,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            }
+        });
+
 
         txtview1.setText(spannableString);
         txtview2.setText(spannableString1);
-
-
+        txtview3.setText(spannableString2);
+        txtview4.setText(spannableString3);
 
 
 
 
     }
+//Metodo para cambiar el color de los textos
+    private void applyColorSpan(SpannableString spannableString, String textToHighlight, int color) {
+        int startIndex = spannableString.toString().indexOf(textToHighlight);
+        int endIndex = startIndex + textToHighlight.length();
+        ForegroundColorSpan colorSpan = new ForegroundColorSpan(getResources().getColor(color));
+        spannableString.setSpan(colorSpan, startIndex, endIndex, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+    }
+
 }
