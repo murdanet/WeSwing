@@ -41,12 +41,6 @@ public class Novetats extends AppCompatActivity {
 
 
         //Queda pendiente hacer que cambie a fragment o activity cuando presione la flecha.
-        flecha1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
 
 
         txtview1.setText(spannableString);

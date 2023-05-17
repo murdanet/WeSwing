@@ -271,23 +271,81 @@
                 android:background="@color/colorLinea"
                 android:layout_marginTop="15dp"/>
 
-
-
-
-
-
-
-
-
-
-
-
-
         </RelativeLayout>
 
-
-
     </ScrollView>
+
+    <!-- Barra de navegación -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="164dp"
+        android:background="#e7e2d7"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollviewregistro">
+
+        <!-- Iconos de navegación -->
+        <ImageButton
+            android:id="@+id/navigation_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_clock"
+            app:tint="#9b9892"/>
+
+        <ImageButton
+            android:id="@+id/navigation_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_news"
+            app:tint="#9b9892"/>
+
+        <ImageButton
+            android:id="@+id/navigation_notifications"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_star"
+            app:tint="#9b9892"/>
+
+        <ImageButton
+            android:id="@+id/navigation_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/baseline_calendar_today_24"
+            app:tint="#9b9892"/>
+
+        <ImageButton
+            android:id="@+id/icon_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_search"
+            app:tint="#9b9892"/>
+
+        <ImageButton
+            android:id="@+id/icon_chat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_chat"
+            app:tint="#9b9892"/>
+
+
+
+    </LinearLayout>
 
 
 
