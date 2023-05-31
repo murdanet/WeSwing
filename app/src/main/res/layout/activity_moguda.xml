@@ -23,7 +23,8 @@
             android:background="#00000000"
             android:layout_gravity="right"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp">
 
         </ImageButton>
 
@@ -41,57 +42,83 @@
     </androidx.appcompat.widget.Toolbar>
 
 
-    <ScrollView
-        android:id="@+id/scrollViewMoguda"
-        android:layout_width="match_parent"
+    <!-- Primer recuadro -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        tools:ignore="ExtraText">
-
-        <LinearLayout
-            android:layout_width="400dp"
-            android:layout_height="700dp"
-            android:layout_marginLeft="5dp"
-            android:background="#FFFFFF"
-            android:orientation="vertical"
-            android:padding="16dp">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Primer texto"
-            android:textColor="#000000"
-            android:textSize="18sp" />
+            android:text="FESTA DE INICI DE TRIMESTRE L.."
+            android:textAlignment="center"
+            android:textColor="@color/rojo"
+            android:textSize="24dp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Segundo texto"
-            android:textColor="#000000"
-            android:textSize="14sp" />
+            android:layout_gravity="center"
+            android:text="ALTRES-LINDY HOP"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="22/04/2017-23/04/2017(4 HORES)"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
-        
-        
 
-        
-        
-    </ScrollView>
-
-    
-
-
-
-
-
-    <!-- Barra de navegación -->
+<!-- Segundo recuadro -->
     <LinearLayout
+        android:layout_width="392dp"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:elevation="3dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="211dp"
+        tools:ignore="MissingConstraints">
+
+
+        <Switch
+            android:id="@+id/switch7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:text="Hi assistiré"
+            android:layout_marginLeft="13dp"
+            android:textSize="17dp"/>
+    </LinearLayout>
+
+    <!-- Tercer recuadro, TODOT -->
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="164dp"
         android:background="#e7e2d7"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -106,7 +133,7 @@
             android:layout_weight="1"
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/ic_clock"
-            app:tint="#9b9892"/>
+            app:tint="#9b9892" />
 
         <ImageButton
             android:id="@+id/navigation_search"
@@ -115,7 +142,7 @@
             android:layout_weight="1"
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/ic_news"
-            app:tint="#9b9892"/>
+            app:tint="#9b9892" />
 
         <ImageButton
             android:id="@+id/navigation_notifications"
@@ -124,7 +151,7 @@
             android:layout_weight="1"
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/ic_star"
-            app:tint="#9b9892"/>
+            app:tint="#9b9892" />
 
         <ImageButton
             android:id="@+id/navigation_profile"
@@ -133,7 +160,7 @@
             android:layout_weight="1"
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/baseline_calendar_today_24"
-            app:tint="#9b9892"/>
+            app:tint="#9b9892" />
 
         <ImageButton
             android:id="@+id/icon_search"
@@ -142,7 +169,7 @@
             android:layout_weight="1"
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/ic_search"
-            app:tint="#9b9892"/>
+            app:tint="#9b9892" />
 
         <ImageButton
             android:id="@+id/icon_chat"
@@ -151,8 +178,7 @@
             android:layout_weight="1"
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/ic_chat"
-            app:tint="#9b9892"/>
-
+            app:tint="#9b9892" />
 
 
     </LinearLayout>
