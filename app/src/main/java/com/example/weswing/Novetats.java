@@ -2,6 +2,7 @@ package com.example.weswing;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -13,7 +14,7 @@ import android.widget.TextView;
 public class Novetats extends AppCompatActivity {
 
     TextView txtview1,txtview2,txtview3,txtview4,txtview5;
-    ImageView flecha1;
+    ImageView flecha2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +24,7 @@ public class Novetats extends AppCompatActivity {
         txtview2= findViewById(R.id.txtview2);
         txtview3=findViewById(R.id.txtview3);
         txtview4=findViewById(R.id.txtview4);
+        flecha2=findViewById(R.id.flecha2);
 
         SpannableString spannableString = new SpannableString("I'm beginning to see the light (0 assistents) avui a las 22:10");
         applyColorSpan(spannableString, "I'm beginning to see the light", R.color.rojo);
@@ -47,6 +49,14 @@ public class Novetats extends AppCompatActivity {
         txtview2.setText(spannableString1);
         txtview3.setText(spannableString2);
         txtview4.setText(spannableString3);
+
+        flecha2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Novetats.this,Moguda.class);
+                startActivity(i);
+            }
+        });
 
 
 
