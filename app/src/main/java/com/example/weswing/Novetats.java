@@ -8,11 +8,12 @@ import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Novetats extends AppCompatActivity {
-
+    ImageButton botonPerfil;
     TextView txtview1,txtview2,txtview3,txtview4,txtview5;
     ImageView flecha2;
     @Override
@@ -25,6 +26,7 @@ public class Novetats extends AppCompatActivity {
         txtview3=findViewById(R.id.txtview3);
         txtview4=findViewById(R.id.txtview4);
         flecha2=findViewById(R.id.flecha2);
+        botonPerfil=findViewById(R.id.btn_profile);
 
         SpannableString spannableString = new SpannableString("I'm beginning to see the light (0 assistents) avui a las 22:10");
         applyColorSpan(spannableString, "I'm beginning to see the light", R.color.rojo);
@@ -55,6 +57,14 @@ public class Novetats extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(Novetats.this,Moguda.class);
                 startActivity(i);
+            }
+        });
+
+        botonPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent (Novetats.this,Perfil.class);
+                startActivity(a);
             }
         });
 

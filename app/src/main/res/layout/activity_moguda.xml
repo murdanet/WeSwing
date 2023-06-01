@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Moguda"
     android:background="#d8d3c8">
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -42,77 +43,159 @@
     </androidx.appcompat.widget.Toolbar>
 
 
-    <!-- Primer recuadro -->
+    <ScrollView
+        android:layout_width="381dp"
+        android:layout_height="670dp"
+        android:layout_marginTop="8dp"
+        android:background="#D1C2B7"
+        android:fillViewport="true"
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:orientation="vertical"
         android:padding="16dp"
-        android:elevation="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.0">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="FESTA DE INICI DE TRIMESTRE L.."
-            android:textAlignment="center"
-            android:textColor="@color/rojo"
-            android:textSize="24dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="ALTRES-LINDY HOP"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="22/04/2017-23/04/2017(4 HORES)"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-<!-- Segundo recuadro -->
-    <LinearLayout
-        android:layout_width="392dp"
-        android:layout_height="56dp"
-        android:background="@color/white"
-        android:elevation="3dp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="211dp"
         tools:ignore="MissingConstraints">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <Switch
-            android:id="@+id/switch7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_weight="1"
-            android:text="Hi assistiré"
-            android:layout_marginLeft="13dp"
-            android:textSize="17dp"/>
-    </LinearLayout>
+            <TextView
+                android:id="@+id/nomMoguda"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="FESTA D'INICI DE TRIMESTRE I ..."
+                android:textAlignment="center"
+                android:textColor="@color/rojo"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-    <!-- Tercer recuadro, TODOT -->
+            <TextView
+                android:id="@+id/tipusMoguda"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="ALTRES - LINDY HOP"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/dataMoguda"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="22/04/2017 - 23/04/2017 (4 HORES)"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Switch
+                android:id="@+id/asistencia"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="Hi assistiré"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:text="Organizador i localització: "
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#BCB1B1" />
+
+            <include
+                android:id="@+id/mogudaOrganitzador"
+                layout="@layout/escola_cardview" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:text="Descripció"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#BCB1B1" />
+
+            <TextView
+                android:id="@+id/descriptionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:text="Festa d'inici de Trimestre I presentació del professors!
+   Començem un nou curs ballant a la Festa d'Inici de Trimestre amb presentació dels Trio!! Horaris: de 22:00 a 22:30 - música swing amb Dj de 22:30 a 23:15 - Primera part Concert de 23:15 a 00:00 - Presentació de professors i actuacions de 00:00 a 00:45. - Segona part Concert de 00:45 a 01:30 - música swing amb Dj Preu: 6€ Alumnes Swing Maniacs 8€ BCNswing, Hoppers Garriga, Terrassahoppers, Crazy Legs, TGNswing i Bigpotters de Granollers 9€.
+ Entrada general. 22/04/2017 - 23/04/2017 (4 Hores).
+ Barcelona, España"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/assistentsButton"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:text="Assistents"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:text="Fotografíes"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#BCB1B1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/white"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:text="No hi ha fotografíes"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -133,7 +216,7 @@
             android:layout_weight="1"
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/ic_clock"
-            app:tint="#9b9892" />
+            app:tint="@color/rojo" />
 
         <ImageButton
             android:id="@+id/navigation_search"
@@ -180,10 +263,6 @@
             android:src="@drawable/ic_chat"
             app:tint="#9b9892" />
 
-
     </LinearLayout>
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

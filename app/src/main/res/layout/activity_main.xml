@@ -16,6 +16,7 @@
         android:src="@drawable/iconoweswinglazos"/>
 
     <LinearLayout
+        android:id="@+id/botonesregistro"
         android:layout_below="@id/logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,27 +27,59 @@
             android:id="@+id/btn_inicio"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/logo"
             android:layout_centerHorizontal="true"
             android:backgroundTint="#AF2C2C"
             android:padding="10dp"
             android:text="INICIAR SESION" />
 
         <Button
-        android:id="@+id/btn_registro"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/logo"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="REGISTRO"
-        android:backgroundTint="#AF2C2C"
-        android:padding="10dp"
-
-        />
+            android:id="@+id/btn_registro"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_inicio"
+            android:layout_centerHorizontal="true"
+            android:text="REGISTRO"
+            android:backgroundTint="#AF2C2C"
+            android:padding="10dp" />
 
     </LinearLayout>
 
 
+    <LinearLayout
+        android:id="@+id/botonessocial"
+        android:layout_below="@id/botonesregistro"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:src="@drawable/instagram"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="15dp" />
+
+        <ImageView
+            android:src="@drawable/facebook"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp" />
+
+        <ImageView
+            android:src="@drawable/gmail"
+            android:scaleType="centerCrop"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp" />
+
+        <ImageView
+            android:src="@drawable/twitter"
+            android:scaleType="centerCrop"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp" />
+
+    </LinearLayout>
 
 
 </RelativeLayout>

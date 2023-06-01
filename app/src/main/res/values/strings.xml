@@ -11,15 +11,6 @@
         <item>Portugués</item>
     </string-array>
 
-    <string-array name="pais">
-        <item>Spain</item>
-        <item>Venezuela</item>
-        <item>Inglaterra</item>
-        <item>Argentina</item>
-        <item>Italia</item>
-        <item>Portugal</item>
-    </string-array>
-
     <string-array name="follower">
         <item>Follower</item>
         <item>creator</item>

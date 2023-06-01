@@ -12,11 +12,29 @@
         android:theme="@style/Theme.WeSwing"
         tools:targetApi="31">
         <activity
+            android:name=".Filtros"
+            android:exported="false" />
+        <activity
+            android:name=".Calendario"
+            android:exported="false" />
+        <activity
+            android:name=".Profesores"
+            android:exported="false" />
+        <activity
+            android:name=".Escuela"
+            android:exported="false" />
+        <activity
+            android:name=".Perfil"
+            android:exported="false" />
+        <activity
+            android:name=".Asistentes"
+            android:exported="false" />
+        <activity
             android:name=".Moguda"
             android:exported="false" />
         <activity
             android:name=".Novetats"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Registro"
             android:exported="false" />

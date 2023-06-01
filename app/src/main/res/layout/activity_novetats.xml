@@ -295,7 +295,7 @@
             android:layout_weight="1"
             android:background="?attr/selectableItemBackground"
             android:src="@drawable/ic_clock"
-            app:tint="#9b9892"/>
+            app:tint="@color/rojo"/>
 
         <ImageButton
             android:id="@+id/navigation_search"
